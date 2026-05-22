@@ -1,0 +1,9 @@
+# .github/metadata.yaml
+description: "Memory Lock primitives — page-locking vocabulary (Memory.Lock + Kind/Token/Error). Extracted from swift-memory-primitives for scope purity; syscall implementations live in swift-iso-9945 and swift-windows-standard."
+topics:
+  - primitives
+  - memory
+  - lock
+homepage: "https://swift-institute.org"
+readme:
+  family: E
