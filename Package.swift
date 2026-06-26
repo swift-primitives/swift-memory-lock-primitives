@@ -22,8 +22,8 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(path: "../swift-memory-primitives"),
-        .package(path: "../swift-error-primitives"),
+        .package(url: "https://github.com/swift-primitives/swift-memory-primitives.git", branch: "main"),
+        .package(url: "https://github.com/swift-primitives/swift-error-primitives.git", branch: "main"),
     ],
     targets: [
         .target(
@@ -40,6 +40,12 @@ let package = Package(
                 .product(name: "Memory Primitives Test Support", package: "swift-memory-primitives"),
             ],
             path: "Tests/Support"
+        ),
+        .testTarget(
+            name: "Memory Lock Primitives Tests",
+            dependencies: [
+                "Memory Lock Primitives",
+            ]
         ),
     ],
     swiftLanguageModes: [.v6]

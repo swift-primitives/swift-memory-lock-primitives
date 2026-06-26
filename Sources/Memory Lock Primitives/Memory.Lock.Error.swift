@@ -31,14 +31,18 @@ extension Memory.Lock {
 // MARK: - CustomStringConvertible
 
 extension Memory.Lock.Error: CustomStringConvertible {
+    /// A human-readable description naming the failed syscall and its error code.
     public var description: Swift.String {
         switch self {
         case .lock(let code):
             return "mlock failed: \(code)"
+
         case .unlock(let code):
             return "munlock failed: \(code)"
+
         case .lockAll(let code):
             return "mlockall failed: \(code)"
+
         case .unlockAll(let code):
             return "munlockall failed: \(code)"
         }

@@ -50,7 +50,10 @@ extension Memory.Lock {
             self._release = release
         }
 
-        /// Releases the lock immediately. Idempotent.
+        /// Releases the lock immediately.
+        ///
+        /// Idempotent: calling it more than once has no further effect, and the
+        /// release witness runs exactly once.
         @inlinable
         public mutating func release() {
             _release?()
