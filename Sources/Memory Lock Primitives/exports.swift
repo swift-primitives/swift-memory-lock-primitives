@@ -1,6 +1,6 @@
 //
 //  exports.swift
-//  swift-memory-primitives
+//  swift-memory-lock-primitives
 //
 //  Created by Coen ten Thije Boonkkamp on 20/05/2026.
 //
